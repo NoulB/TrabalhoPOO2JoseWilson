@@ -5,6 +5,7 @@
  */
 package visão;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -61,11 +62,11 @@ public class telalogin extends javax.swing.JFrame {
 
         jLabelusuario.setText("Usuario:");
         getContentPane().add(jLabelusuario);
-        jLabelusuario.setBounds(280, 54, 50, 20);
+        jLabelusuario.setBounds(270, 54, 60, 20);
 
         jLabelsenha.setText("Senha:");
         getContentPane().add(jLabelsenha);
-        jLabelsenha.setBounds(280, 84, 50, 20);
+        jLabelsenha.setBounds(270, 84, 60, 20);
 
         usuariofield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +81,11 @@ public class telalogin extends javax.swing.JFrame {
                 jPasswordFieldsenhaActionPerformed(evt);
             }
         });
+        jPasswordFieldsenha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordFieldsenhaKeyPressed(evt);
+            }
+        });
         getContentPane().add(jPasswordFieldsenha);
         jPasswordFieldsenha.setBounds(330, 80, 150, 30);
 
@@ -90,7 +96,7 @@ public class telalogin extends javax.swing.JFrame {
 
         jLabelfundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundobranco.png"))); // NOI18N
         getContentPane().add(jLabelfundo);
-        jLabelfundo.setBounds(0, 0, 500, 240);
+        jLabelfundo.setBounds(0, 0, 530, 280);
 
         setSize(new java.awt.Dimension(513, 279));
         setLocationRelativeTo(null);
@@ -121,6 +127,21 @@ System.exit(0);
     private void jPasswordFieldsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldsenhaActionPerformed
+
+    private void jPasswordFieldsenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldsenhaKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+        if(usuariofield.getText().equals("medico")&&jPasswordFieldsenha.getText().equals("193")){
+ telaprincipal tela= new telaprincipal();
+tela.setVisible(true);
+dispose();}
+else if(usuariofield.getText().equals("enfermeiro")&&jPasswordFieldsenha.getText().equals("192")){
+ telaprincipal tela= new telaprincipal();
+tela.setVisible(true);
+dispose();}
+else{JOptionPane.showMessageDialog(rootPane, "senha ou usuario invalidos");}
+        }
+    }//GEN-LAST:event_jPasswordFieldsenhaKeyPressed
 
     /**
      * @param args the command line arguments

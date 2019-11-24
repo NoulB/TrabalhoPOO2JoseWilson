@@ -115,15 +115,16 @@ public class Queries2 extends javax.swing.JFrame {
         b_buscar = new javax.swing.JButton();
         tipo_pesquisa = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
         jLabel1.setText("Pesquisa :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 0, 90, 24);
+        jLabel1.setBounds(10, 50, 90, 24);
 
         med_text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +132,7 @@ public class Queries2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(med_text);
-        med_text.setBounds(70, 0, 130, 30);
+        med_text.setBounds(90, 50, 130, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,7 +156,7 @@ public class Queries2 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 76, 596, 363);
+        jScrollPane1.setBounds(10, 110, 660, 260);
 
         b_buscar.setText("Buscar");
         b_buscar.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +165,7 @@ public class Queries2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(b_buscar);
-        b_buscar.setBounds(450, 0, 80, 30);
+        b_buscar.setBounds(480, 50, 80, 30);
 
         tipo_pesquisa.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<Selecione modo de pesquisa>", "Nome medicamento", "Princípio ativo", "Tipo" }));
         tipo_pesquisa.addActionListener(new java.awt.event.ActionListener() {
@@ -173,9 +174,9 @@ public class Queries2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(tipo_pesquisa);
-        tipo_pesquisa.setBounds(210, 0, 210, 30);
+        tipo_pesquisa.setBounds(250, 50, 210, 30);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exitblue.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/voltar.png"))); // NOI18N
         jButton1.setPreferredSize(new java.awt.Dimension(545, 521));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,13 +184,18 @@ public class Queries2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(566, 0, 40, 40);
+        jButton1.setBounds(630, 50, 40, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundomedical.jpg"))); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("ecoFarma");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, -10, 100, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundoprincipal.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 610, 450);
+        jLabel2.setBounds(0, 30, 680, 380);
 
-        setSize(new java.awt.Dimension(632, 489));
+        setSize(new java.awt.Dimension(689, 411));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -263,6 +269,7 @@ dispose();        // TODO add your handling code here:
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField med_text;

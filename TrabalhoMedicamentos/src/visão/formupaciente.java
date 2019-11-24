@@ -47,13 +47,13 @@ Modelopaciente mod = new Modelopaciente();
         jTextField3 = new javax.swing.JFormattedTextField();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Pacientes");
@@ -63,80 +63,67 @@ Modelopaciente mod = new Modelopaciente();
         jPanel1.setToolTipText("");
         jPanel1.setLayout(null);
 
-        jnome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jnome.setBackground(new java.awt.Color(246, 242, 242));
+        jnome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jnome.setText("Nome:");
         jPanel1.add(jnome);
-        jnome.setBounds(180, 40, 60, 17);
+        jnome.setBounds(50, 40, 60, 17);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Telefone:");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(180, 70, 60, 30);
+        jLabel3.setBounds(50, 70, 80, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Cpf:");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(180, 110, 50, 20);
+        jLabel4.setBounds(50, 110, 50, 20);
 
-        jTextField3.setEnabled(false);
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
         jPanel1.add(jTextField3);
-        jTextField3.setBounds(240, 70, 240, 30);
+        jTextField3.setBounds(140, 110, 340, 30);
 
-        jTextField1.setEnabled(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(240, 40, 240, 30);
+        jTextField1.setBounds(140, 30, 340, 30);
 
-        jTextField2.setEnabled(false);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(240, 100, 240, 30);
-
-        jButton1.setText("Novo");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(30, 50, 80, 23);
+        jTextField2.setBounds(140, 70, 340, 30);
 
         jButton2.setText("Salvar");
-        jButton2.setEnabled(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(30, 70, 80, 23);
+        jButton2.setBounds(400, 170, 80, 30);
 
         jButton3.setText("Cancelar");
-        jButton3.setEnabled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(30, 90, 80, 23);
+        jButton3.setBounds(260, 170, 80, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundomedical.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundoprincipal.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(-80, -90, 650, 380);
+        jLabel2.setBounds(-80, -90, 680, 360);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(79, 94, 510, 260);
@@ -144,38 +131,33 @@ Modelopaciente mod = new Modelopaciente();
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Cadastro de Pacientes");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(208, 27, 240, 22);
+        jLabel1.setBounds(210, 60, 240, 22);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exitblue.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/voltar.png"))); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(620, 0, 30, 30);
+        jButton6.setBounds(630, 50, 40, 40);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundomedical.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundoprincipal.jpg"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(0, 0, 650, 380);
+        jLabel5.setBounds(0, 30, 690, 370);
 
-        setSize(new java.awt.Dimension(669, 426));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("ecoFarma");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(10, -10, 100, 50);
+
+        setSize(new java.awt.Dimension(690, 400));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-jTextField1.setEnabled(true);
-jTextField2.setEnabled(true);
-jTextField3.setEnabled(true);
-jButton2.setEnabled(true);
-jButton3.setEnabled(true);
-
-
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 telaprincipal tela = new telaprincipal();
@@ -254,7 +236,6 @@ jButton3.setEnabled(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
@@ -263,6 +244,7 @@ jButton3.setEnabled(false);
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;

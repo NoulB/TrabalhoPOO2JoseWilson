@@ -29,23 +29,26 @@ public class telaprincipal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jInternalFramebemvindo = new javax.swing.JInternalFrame();
         jPanelinternal = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        painelfundo = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        fechartelaprincipal = new javax.swing.JButton();
-        jLabelplanodefundotelaprincipal = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        painelfundo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
+        ferramenta = new javax.swing.JMenu();
+        jMenuItemtelabemvindo = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenupesquisa = new javax.swing.JMenu();
         jMenuItempesquisa1 = new javax.swing.JMenuItem();
         jMenuItempesquisa2 = new javax.swing.JMenuItem();
         jMenuItempesquisa3 = new javax.swing.JMenuItem();
-        ferramenta = new javax.swing.JMenu();
-        jMenuItemtelabemvindo = new javax.swing.JMenuItem();
         jMenusair = new javax.swing.JMenu();
         jMenuItemsair = new javax.swing.JMenuItem();
 
@@ -55,71 +58,90 @@ public class telaprincipal extends javax.swing.JFrame {
         jMenu2.setText("Edit");
         jMenuBar2.add(jMenu2);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
-
-        jInternalFramebemvindo.setTitle("bem vindo");
         jInternalFramebemvindo.setVisible(true);
         jInternalFramebemvindo.getContentPane().setLayout(null);
 
         jPanelinternal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelinternal.setLayout(null);
+        jInternalFramebemvindo.getContentPane().add(jPanelinternal);
+        jPanelinternal.setBounds(0, 50, 670, 300);
 
-        jLabel2.setText("consulta-");
-        jPanelinternal.add(jLabel2);
-        jLabel2.setBounds(10, 4, 60, 20);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundobranco.png"))); // NOI18N
 
-        jLabel3.setText("Cadastro paciente");
-        jPanelinternal.add(jLabel3);
-        jLabel3.setBounds(150, 10, 90, 14);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 10, 10);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/CadMedicos.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ico_medic.png"))); // NOI18N
         jButton1.setToolTipText("consulta para medico");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelinternal.add(jButton1);
-        jButton1.setBounds(10, 30, 100, 120);
+        getContentPane().add(jButton1);
+        jButton1.setBounds(20, 90, 110, 110);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cadPacientes.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(248, 244, 244));
+        jLabel2.setText("<html> <p> <center> Consulta </br> medicamentos </center> </p> </html>");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(20, 40, 110, 50);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ico_paciente.jpeg"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanelinternal.add(jButton2);
-        jButton2.setBounds(130, 30, 100, 120);
+        getContentPane().add(jButton2);
+        jButton2.setBounds(150, 90, 110, 110);
 
-        painelfundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/internalframe.png"))); // NOI18N
-        jPanelinternal.add(painelfundo);
-        painelfundo.setBounds(-240, 0, 940, 300);
-
-        jInternalFramebemvindo.getContentPane().add(jPanelinternal);
-        jPanelinternal.setBounds(0, 50, 670, 300);
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(254, 254, 254));
+        jLabel3.setText("Cadastro paciente");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(140, 70, 120, 16);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("sistema de gerenciamento de:");
-        jInternalFramebemvindo.getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 0, 240, 50);
+        jLabel1.setText("ecoFarma");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, -10, 110, 50);
 
-        fechartelaprincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
-        fechartelaprincipal.setToolTipText("fechar tela principal");
-        fechartelaprincipal.addActionListener(new java.awt.event.ActionListener() {
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(254, 254, 254));
+        jLabel4.setText("Receituário");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(300, 70, 80, 16);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ico_receita.jpeg"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(280, 90, 120, 110);
+
+        painelfundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundoprincipal.jpg"))); // NOI18N
+        getContentPane().add(painelfundo);
+        painelfundo.setBounds(0, -60, 1110, 550);
+
+        ferramenta.setText("arquivo");
+
+        jMenuItemtelabemvindo.setText("Receituário");
+        jMenuItemtelabemvindo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fechartelaprincipalActionPerformed(evt);
+                jMenuItemtelabemvindoActionPerformed(evt);
             }
         });
-        jInternalFramebemvindo.getContentPane().add(fechartelaprincipal);
-        fechartelaprincipal.setBounds(620, 10, 30, 30);
+        ferramenta.add(jMenuItemtelabemvindo);
 
-        getContentPane().add(jInternalFramebemvindo);
-        jInternalFramebemvindo.setBounds(0, 70, 680, 380);
+        jMenuItem2.setText("sair");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        ferramenta.add(jMenuItem2);
 
-        jLabelplanodefundotelaprincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo_telaprincipal.jpg"))); // NOI18N
-        getContentPane().add(jLabelplanodefundotelaprincipal);
-        jLabelplanodefundotelaprincipal.setBounds(0, 0, 680, 450);
+        jMenuBar1.add(ferramenta);
 
         jMenu3.setText("cadastro");
 
@@ -135,7 +157,7 @@ public class telaprincipal extends javax.swing.JFrame {
 
         jMenupesquisa.setText("pesquisa");
 
-        jMenuItempesquisa1.setText("pesquisa1");
+        jMenuItempesquisa1.setText("consulta medicamentos");
         jMenuItempesquisa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItempesquisa1ActionPerformed(evt);
@@ -156,16 +178,9 @@ public class telaprincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenupesquisa);
 
-        ferramenta.setText("ferramenta");
+        jMenusair.setText("Ajuda");
 
-        jMenuItemtelabemvindo.setText("tela bem-vindo");
-        ferramenta.add(jMenuItemtelabemvindo);
-
-        jMenuBar1.add(ferramenta);
-
-        jMenusair.setText("sair");
-
-        jMenuItemsair.setText("sair");
+        jMenuItemsair.setText("Sobre");
         jMenuItemsair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemsairActionPerformed(evt);
@@ -177,12 +192,14 @@ public class telaprincipal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(690, 508));
+        setSize(new java.awt.Dimension(687, 427));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItempesquisa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItempesquisa1ActionPerformed
-        // TODO add your handling code here:
+Queries2 tela = new Queries2();
+tela.setVisible(true);
+dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItempesquisa1ActionPerformed
 
     private void jMenuItempesquisa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItempesquisa2ActionPerformed
@@ -195,12 +212,10 @@ tela.setVisible(true);
 dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void fechartelaprincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechartelaprincipalActionPerformed
-        jInternalFramebemvindo.dispose();
-    }//GEN-LAST:event_fechartelaprincipalActionPerformed
-
     private void jMenuItemsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemsairActionPerformed
-      System.exit(0);
+      Sobre tela = new Sobre();
+tela.setVisible(true);
+dispose();
     }//GEN-LAST:event_jMenuItemsairActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -214,6 +229,14 @@ formupaciente tela = new formupaciente();
 tela.setVisible(true);
 dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jMenuItemtelabemvindoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemtelabemvindoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemtelabemvindoActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+      System.exit(0);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,7 +278,6 @@ dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton fechartelaprincipal;
     private javax.swing.JMenu ferramenta;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -263,13 +285,16 @@ dispose();
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabelplanodefundotelaprincipal;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItempesquisa1;
     private javax.swing.JMenuItem jMenuItempesquisa2;
     private javax.swing.JMenuItem jMenuItempesquisa3;
@@ -277,6 +302,7 @@ dispose();
     private javax.swing.JMenuItem jMenuItemtelabemvindo;
     private javax.swing.JMenu jMenupesquisa;
     private javax.swing.JMenu jMenusair;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelinternal;
     private javax.swing.JLabel painelfundo;
     // End of variables declaration//GEN-END:variables
