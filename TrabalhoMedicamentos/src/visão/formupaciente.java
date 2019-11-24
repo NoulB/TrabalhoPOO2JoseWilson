@@ -5,6 +5,7 @@
  */
 package visão;
 import connection.ConnectionFactory;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -84,6 +85,11 @@ Modelopaciente mod = new Modelopaciente();
                 jTextField3ActionPerformed(evt);
             }
         });
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField3KeyPressed(evt);
+            }
+        });
         jPanel1.add(jTextField3);
         jTextField3.setBounds(140, 110, 340, 30);
 
@@ -119,7 +125,7 @@ Modelopaciente mod = new Modelopaciente();
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(260, 170, 80, 30);
+        jButton3.setBounds(260, 170, 100, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundoprincipal.jpg"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -200,6 +206,26 @@ jButton3.setEnabled(false);
    
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+    private void jTextField3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+        if(jTextField1.getText().equals("")||jTextField2.getText().equals("")||jTextField3.getText().equals("")){
+ JOptionPane.showMessageDialog(rootPane, "senha ou usuario invalidos");}
+else{
+p.setnome(jTextField1.getText());
+p.settelefone(jTextField2.getText());
+p.setcpf(jTextField3.getText());
+mod.salvar(p);
+jTextField1.setText("");
+jTextField2.setText("");
+jTextField3.setText("");
+jTextField1.setEnabled(false);
+jTextField2.setEnabled(false);
+jTextField3.setEnabled(false);
+jButton2.setEnabled(false);
+jButton3.setEnabled(false);
+    }//GEN-LAST:event_jTextField3KeyPressed
+}}
+    
     /**
      * @param args the command line arguments
      */
